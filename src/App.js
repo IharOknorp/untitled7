@@ -1,10 +1,9 @@
 import React, {Component} from 'react';
 import {browserHistory} from 'react-router';
-import {Router, Route, IndexRoute} from 'react-router';
+import {Router, Route} from 'react-router';
 
 import UserSignin from './components/userSignin.js';
 import CreateUser from './components/createUser.js'
-import ManagerView from './components/managerView.js';
 import TaskList from './components/projectList.js';
 
 class App extends Component {
@@ -14,8 +13,7 @@ class App extends Component {
                 <Route path="/" component={UserSignin}/>
                 <Route path="createUser" component={CreateUser}/>
                 <Route path="taskList" component={TaskList}>
-                    {/*<IndexRoute component={TaskList}/>*/}
-                    {/*<Route path="taskList" component={TaskList}/>*/}
+
                 </Route>
             </Router>
         )
